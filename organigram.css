@@ -1,0 +1,181 @@
+.organigram-parent-node {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    flex: 0 0 100%;
+}
+
+.organigram-title {
+
+}
+
+.node {
+    width: 100%;
+}
+
+.organigram-nodes {
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    justify-content: space-around;
+}
+
+
+.organigram-column {
+    justify-content: flex-start;
+}
+
+.organigram-grid > .organigram-nodes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.organigram-no-children-border .organigram-outer-node {
+    border: 0 !important;
+}
+
+.organigram-nodes > .organigram-outer-node {
+    border: solid 1px white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.organigram-statut {
+
+}
+
+.organigram-inner-node {
+    padding-top: 5px;
+}
+
+.organigram-inside-node {
+
+}
+
+@media screen and (min-width: 950px) {
+    .organigram-outer-node {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.organigram-outer-node {
+    overflow-y: auto;
+}
+
+.organigram-column > .organigram-nodes {
+    flex-direction: column;
+    display: flex;
+}
+
+.organigram-column > .organigram-node {
+    flex-direction: column;
+    display: flex;
+}
+
+.organigram-column > .organigram-nodes > .organigram-outer-node {
+    flex: 0 0 calc(100% - 10px);
+}
+
+.organigram-column > .organigram-node > .organigram-outer-node {
+    flex: 0 0 calc(100% - 10px);
+}
+
+.organigram-grid > .organigram-nodes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.organigram-grid > .organigram-nodes > .organigram-outer-node {
+    flex: 0 0 calc(50% - 10px);
+}
+
+.organigram-grid > .organigram-nodes > .organigram-outer-node:nth-of-type(2n + 1):last-child {
+    flex: 0 0 calc(100% - 10px);
+}
+
+.organigram-grid > .organigram-nodes > .organigram-outer-node:nth-of-type(2n + 1):last-child > .organigram-inner-node {
+    display: grid;
+    grid-template-columns:
+    repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .organigram-grid > .organigram-nodes > .organigram-outer-node {
+        flex: 0 0 calc(100% - 10px);
+    }
+
+    .organigram-grid > .organigram-nodes > .organigram-outer-node:nth-of-type(2n + 1):last-child > .organigram-inner-node {
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+
+.organigram-row {
+
+}
+
+.organigram-node-nom {
+    color: white;
+}
+
+
+.organigram-node {
+    overflow-y: auto;
+}
+
+/* width */
+.organigram-node ::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.organigram-node ::-webkit-scrollbar-track {
+    background: #b3a8a8;
+}
+
+/* Handle */
+.organigram-node ::-webkit-scrollbar-thumb {
+    background: #67717f;
+}
+
+/* Handle on hover */
+.organigram-node ::-webkit-scrollbar-thumb:hover {
+    background: #4e4a4a;
+}
+
+.floating > div {
+    padding: 0 !important;
+}
+
+.node a {
+    color: white !important;
+}
+
+.node a:hover, .node a:focus, .node a:active {
+    text-decoration: underline;
+    color: #2b6bb0 !important;
+}
+
+.organigram-column .organigram-node {
+    height: inherit;
+}
+
+@media screen and (max-width: 600px) {
+    .oc-export-btn{
+        display: none!important;
+    }
+}
+.organigram-node,.organigram-title,.node,.organigram-nodes{
+    font-size: 16px;
+    font-weight: 500;
+}
